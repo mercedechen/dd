@@ -8,31 +8,43 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <h1>Dine&Divide</h1> <!-- Change to logo png-->
+  <h1>Dine<span id="logo-symbol">&</span>Divide</h1> <!-- Change to logo png-->
   <hr>
   <h2>Dine together. Divide smarter.</h2>
   <form>
-    <div>
-      <label for="subtotal">Subtotal</label>
-      <input type="number" id="subtotal">
+    <label for="subtotal">Subtotal</label>
+    <span id="currency-symbol">$</span>
+    <input type="number" id="subtotal" name="subtotal" placeholder="0" inputmode="decimal" step="0.01" min="0">
+
+    <label for="tip-rate">Tip %</label>
+    <div id="rates">
+      <button>15</button>
+      <button>18</button>
+      <button>20</button>
+      <input type="number" id="tip-rate" name="tip-rate" placeholder="CSTM" inputmode="numeric" min="0">
     </div>
-    <div>
-      <label for="tiprate">Tip %</label>
-      <input type="number" id="tiprate">
-    </div>
-    <h3>Tip</h3>
-    <div>
-      <label for="taxrate">Tax %</label>
-      <input type="number" id="taxrate">
-    </div>
-    <h3>Tax</h3>
+
+    <h3 id="tip">Tip</h3>
+    <span id="currency-symbol">$</span>
+    <p id="tip-amt"></p>
+
+    <label for="tax-rate">Tax %</label>
+    <input type="number" id="tax-rate" name="tax-rate" placeholder="0" inputmode="numeric" min="0">
+
+    <h3 id="tax">Tax</h3>
+    <span id="currency-symbol">$</span>
+    <p id="tax-amt"></p>
+
     <h3>Total</h3>
-    <div>
-      <label for="split">Split</label>
-      <input type="number" id="split">
-    </div>
+    <p id="total-amt"></p>
+
+    <label for="split">Split</label>
+    <input type="number" id="split" name="split" placeholder="No. of Persons" min="2">
+
     <h3>You Pay</h3>
-    <div>
+    <p id="payment"></p>
+
+    <div id="form-opt">
       <button>Submit</button>
       <button>Clear</button>
     </div>

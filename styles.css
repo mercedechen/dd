@@ -1,34 +1,134 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 50px 35px;
+  font-size: 14px;
 }
 
 h1 {
   font-size: 40px;
   text-transform: uppercase;
-  margin: 50px 0 0 0;
+  font-weight: 600;
+  margin: 0;
   padding: 0;
-    text-align: center;
+  text-align: center;
+}
+
+#logo-symbol {
+  font-weight: 300;
 }
 
 hr {
   width: 190px;
 }
 
+h2, h3 {
+  font-weight: 300;
+  margin: 0;
+}
+
 h2 {
   font-size: 10px;
   text-transform: uppercase;
-  font-weight: 300;
   font-style: italic;
-  margin: 0 0 50px 0;
   text-align: center;
 }
 
+h3 {
+  text-transform: uppercase;
+}
+
+h3, label {
+  font-size: 20px;
+}
+
 form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 35px;
+  display: grid;
+  grid-template-columns: 1fr 42px 178px;
+  align-items: center;
+  margin: 36px 0 0 0;
+  gap: 7px;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+#currency-symbol {
+  display: block; 
+  color: #AAAAAA;
+  padding: 0;
+  font-size: 24px;
+  text-align: right;
 }
 
 input {
-  width: 178px;
+  font-size: 24px;
+  border: none;
+}
+
+#rates {
+  grid-area: 2/2/3/4;
+  display: flex;
+  justify-content: right;
+
+}
+
+#rates button {
+  padding: 0;
+  border: none;
+  margin: 0 5px;
+  font-size: 24px;
+}
+
+#tip {
+  grid-area: 3/1/4/2;
+}
+
+#tip-rate {
+  width: 56px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  margin: 0 5px;
+}
+
+#tip-rate::placeholder {
+  color: #000000;
+}
+
+p {
+  font-size: 24px;
+  margin: 0;
+}
+
+#tax-rate {
+  grid-area: 4/2/5/4;
+}
+
+#tax {
+  grid-area: 5/1/6/2;
+}
+
+#total-amt {
+  grid-area: 6/2/7/4;
+}
+
+#split {
+  grid-area: 7/2/8/4;
+}
+
+#payment {
+  grid-area: 8/2/9/4;
+}
+
+#form-opt {
+  grid-area: 9/3/10/4;
+}
+
+button {
+  border: none;
 }
