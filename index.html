@@ -11,41 +11,54 @@
   <h1>Dine<span id="logo-symbol">&</span>Divide</h1> <!-- Change to logo png-->
   <hr>
   <h2>Dine together. Divide smarter.</h2>
-  <form>
+  <form action="">
     <label for="subtotal">Subtotal</label>
-    <span id="currency-symbol">$</span>
+    <span class="symbol">$</span>
     <input type="number" id="subtotal" name="subtotal" placeholder="0" inputmode="decimal" step="0.01" min="0">
 
-    <label for="tip-rate">Tip %</label>
-    <div id="rates">
+    <label for="cstm-rate">Tip %</label>
+    <span></span>
+    <div id="tip-rates">
       <button>15</button>
       <button>18</button>
       <button>20</button>
-      <input type="number" id="tip-rate" name="tip-rate" placeholder="CSTM" inputmode="numeric" min="0">
+      <input type="number" id="cstm-rate" name="tip-rate" placeholder="CSTM" inputmode="numeric" min="0">
     </div>
 
-    <h3 id="tip">Tip</h3>
-    <span id="currency-symbol">$</span>
+    <h3 id="tip-cost">Tip</h3>
+    <span class="symbol">$</span>
     <p id="tip-amt"></p>
 
     <label for="tax-rate">Tax %</label>
+    <span></span>
     <input type="number" id="tax-rate" name="tax-rate" placeholder="0" inputmode="numeric" min="0">
 
-    <h3 id="tax">Tax</h3>
-    <span id="currency-symbol">$</span>
+    <h3 id="tax-cost">Tax</h3>
+    <span class="symbol">$</span>
     <p id="tax-amt"></p>
 
     <h3>Total</h3>
+    <span class="symbol">$</span>
     <p id="total-amt"></p>
 
-    <label for="split">Split</label>
-    <input type="number" id="split" name="split" placeholder="No. of Persons" min="2">
-
+    
+    <div id="form-opt">
+      <button>Calculate</button>
+      <button>Clear</button>
+    </div>
+  </form>
+  
+  <form action="">
+    <label for="party">Party</label>
+    <span></span>
+    <input type="number" id="party" name="party" placeholder="No. of Persons" min="2">
+  
     <h3>You Pay</h3>
+    <span class="symbol">$</span>
     <p id="payment"></p>
 
-    <div id="form-opt">
-      <button>Submit</button>
+    <div id="split-opt">
+      <button>Split</button>
       <button>Clear</button>
     </div>
   </form>
